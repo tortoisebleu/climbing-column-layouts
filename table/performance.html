@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climbing Performance Table</title>
+  
+  <style>
+    /* 画面全体の中央寄せ（GitHubで見やすくするため） */
+    body {
+      padding: 20px;
+      background-color: #f5f7f9;
+      display: flex;
+      justify-content: center;
+    }
+
+  table {
+  width: 100%;
+  max-width: 900px; /* 広がりすぎ防止 */
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 14px;
+  color: #2c3e50;
+}
+/* --- ヘッダー(th)全体の基本設定 --- */
+table th {
+  text-align: center;
+  color: white;
+  background: linear-gradient(to bottom, #4a7fb5, #1a4a7a);
+  border-left: 1px solid #2e5f9a;
+  border-top: 1px solid #2e5f9a;
+  border-bottom: 1px solid #2e5f9a;
+  box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.2) inset;
+  padding: 10px 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+table th:last-child {
+  border-right: 1px solid #2e5f9a;
+}
+/* --- section-header と col-header の共通スタイル --- */
+.section-header td,
+.col-header td {
+  background: linear-gradient(to bottom, #4a7fb5, #1a4a7a);
+  color: white;
+  font-weight: 700;
+  border-left: 1px solid #2e5f9a;
+  border-top: 1px solid #2e5f9a;
+  border-bottom: 1px solid #2e5f9a;
+  border-right: 1px solid #2e5f9a;
+  letter-spacing: 0.05em;
+  padding: 12px 5px;
+}
+/* --- hover時にヘッダー行の色が変わらないように --- */
+tbody tr.section-header:hover td,
+tbody tr.col-header:hover td {
+  background: linear-gradient(to bottom, #4a7fb5, #1a4a7a);
+}
+/* --- 角丸の制御 --- */
+table th, table td {
+  border-radius: 0;
+}
+table tr.round-top th:first-child {
+  border-top-left-radius: 15px;
+}
+table tr.round-top th:last-child {
+  border-top-right-radius: 15px;
+}
+table tr.round-bottom td:first-child {
+  border-bottom-left-radius: 15px;
+}
+table tr.round-bottom td:last-child {
+  border-bottom-right-radius: 15px;
+}
+/* --- ボディ(td)の基本設定 --- */
+table td {
+  text-align: center;
+  border-left: 1px solid #b8ccdc;
+  border-bottom: 1px solid #b8ccdc;
+  padding: 10px 5px;
+  background-color: #fff;
+  transition: background-color 0.15s ease;
+}
+table td:last-child {
+  border-right: 1px solid #b8ccdc;
+}
+tbody tr:nth-child(even) td {
+  background-color: #f0f6fb;
+}
+tbody tr:hover td {
+  background-color: #cde0f0;
+}
+/* 幅の指定 */
+table thead tr:nth-child(2) th:nth-child(1) { width: 30%; }
+table thead tr:nth-child(2) th:nth-child(2) { width: 50%; }
+table thead tr:nth-child(2) th:nth-child(3) { width: 20%; }
+</style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr class="round-top">
+        <th colspan="3">Current Limit : Speed Climbing</th>
+      </tr>
+      <tr>
+        <th>Time</th>
+        <th>Venue</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>58 sec</td>
+        <td>Offenburg : DAV kletterzentrum</td>
+        <td>2017.5.6</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr class="section-header">
+        <td colspan="3">Local Climbing Competition</td>
+      </tr>
+      <tr class="col-header">
+        <td>Rankings</td>
+        <td>Event Name</td>
+        <td>date</td>
+      </tr>
+      <tr>
+        <td>4th place</td>
+        <td>Bloc Challenge</td>
+        <td>2017/2018</td>
+      </tr>
+      <tr>
+        <td>First Place</td>
+        <td>Combiné Challenge</td>
+        <td>2018/2019</td>
+      </tr>
+      <tr class="round-bottom">
+        <td>4th place</td>
+        <td>Plafond Challenge</td>
+        <td>2022</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
