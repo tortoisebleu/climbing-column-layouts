@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climbing Area - Blue Layout</title>
+  
+  <style>
+    /* ===== Base ===== */
+    .area-portfolio {
+      font-family: sans-serif;
+      color: #333;
+      width: 100%;
+    }
+
+    /* ===== Country tag ===== */
+    .country-tag {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(#829ebc, #225588);
+      padding: 8px 15px;
+      margin: 30px 0 15px 0;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* ===== Grid ===== */
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
+    /* ===== Card ===== */
+    .area-card {
+      display: flex;
+      background: #fff;
+      border: 1px solid #d1d9e0;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-color: #225588;
+    }
+
+    /* ===== Card image ===== */
+    .area-img {
+      width: 100px;
+      min-width: 100px;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      align-self: stretch;
+    }
+
+    /* ===== Card info ===== */
+    .area-info {
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .area-name {
+      font-weight: bold;
+      color: #225588;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .area-name::before {
+      content: "";
+      border-style: solid;
+      border-width: 4px 0 4px 6px;
+      border-color: transparent transparent transparent #829ebc;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .area-meta {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .area-ambiance {
+      font-size: 0.75rem;
+      color: #e67e22;
+      font-style: italic;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 簡易メニュー（自分用） -->
+  <nav style="margin: 20px 0; font-family: sans-serif;">
+    <a href="index.html">緑版</a> | 
+    <a href="blue.html">青版</a> | 
+    <a href="mix-side-by-side.html">混合（横）</a> | 
+    <a href="mix-stacked.html">混合（縦）</a>
+  </nav>
+
+  <div class="area-portfolio">
+
+    <div class="country-tag">🇨🇭 Les Falaises de Suisse</div>
+    <div class="area-grid">
+      <a href="https://escalade.amebaownd.com/posts/53351172" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/c65e68878447f7e3466174a43752b73a_1e7e2b015fae9006e8ff36ddf5aa9c99.jpg?width=400" alt="Bernese Oberland" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Bernese Oberland</div>
+          <div class="area-meta">style : « Grande voie »</div>
+          <div class="area-ambiance">✨ Falaises grandioses au cœur des Alpes</div>
+        </div>
+      </a>
+      <a href="https://escalade.amebaownd.com/posts/58562442" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/d089bf7cf5b0e2e80886f508af6ef9f5_29bf188f6aeaea4fed6abc48473e10a2.jpg?width=400" alt="Grindelwald" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Grindelwald & Saas-Fee</div>
+          <div class="area-meta">style : « Via Ferrata »</div>
+          <div class="area-ambiance">✨ Sommets mythiques et air pur</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="country-tag">🇮🇹 Les Falaises d'Italie</div>
+    <div class="area-grid">
+      <a href="https://escalade.amebaownd.com/posts/54970263" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/db481dcd0f5b57764a9cb85ce8255113_2ce3b61e6e209860768c58d11cfa52e8.jpg?width=400" alt="Valle dell'Orco" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Valle dell'Orco</div>
+          <div class="area-meta">style : « Grande voie / Couenne »</div>
+          <div class="area-ambiance">✨ Le paradis de la fissure</div>
+        </div>
+      </a>
+      <a href="https://escalade.amebaownd.com/posts/25706899" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/9fc3aceaaff95fa57a104d0fbcee24e2_d96419eb8ffbf4991381f978a38bfc4a.jpg?width=400" alt="Finale Ligure" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Finale Ligure</div>
+          <div class="area-meta">style : « Couenne / Grande voie »</div>
+          <div class="area-ambiance">✨ Rocher parfait face à la Méditerranée</div>
+        </div>
+      </a>
+      <a href="https://escalade.amebaownd.com/posts/55597126" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/71fd26462a467a2f6ef38ce1c5c04b05_3b3280d763eb896b9f8f798362be9a11.jpg?width=400" alt="Arco" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Arco</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Ambiance solaire et dolce vita</div>
+        </div>
+      </a>
+      <a href="https://escalade.amebaownd.com/posts/58562694" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/7241ab2b043f05463d4211cd4cd5853b_d44205e34e47529c66707977b988e69d.jpg?width=400" alt="Dolomiti" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Dolomiti</div>
+          <div class="area-meta">style : « Via Ferrata »</div>
+          <div class="area-ambiance">✨ Parois de légende et tours verticales</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="country-tag">🇩🇪 Les Falaises d'Allemagne</div>
+    <div class="area-grid">
+      <a href="https://escalade.amebaownd.com/posts/55591092" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/5108b99d455f6e36902648cafaed3e88_48a05db25a761c9bcb5670c520a44551.jpg?width=400" alt="Frankenjura" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Frankenjura</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Doigts d'acier en pleine forêt</div>
+        </div>
+      </a>
+      <a href="https://escalade.amebaownd.com/posts/58565545" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/40114443960fd3e8eef1fd7acfd24169_049bf04c19015c443272e5dba782daf5.jpg?width=400" alt="Der Battert" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Der Battert</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Escalade élégante près de Baden-Baden</div>
+        </div>
+      </a>
+      <a href="https://escalade.amebaownd.com/posts/58565353" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/8b6af9baa8b7ee9f3a7875439f55e543_f95729520db31598c647c54b4cec6999.jpg?width=400" alt="Pfalz" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Pfalz</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Tours de sable et calme absolu</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="country-tag">🇬🇷 Les Falaises de Grèce</div>
+    <div class="area-grid">
+      <a href="https://escalade.amebaownd.com/posts/56229758" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/aee01c74ae97e2471794c19d38180a7f_c5dd580928fe130af10c184f50736ae9.jpg?width=400" alt="Kalymnos" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Kalymnos</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Le paradis bleu des grimpeurs</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="country-tag">🇦🇹 Les Falaises d'Autriche</div>
+    <div class="area-grid">
+      <a href="https://escalade.amebaownd.com/posts/58565670" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/e544d2847ac2246e8ed1744b79aa5c9e_c52ac46bf40ac56619eb9ae90e8150ee.jpg?width=400" alt="Tirol" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Tirol</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Pure踏のAlpes tyroliennes</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="country-tag">🇱🇺 Les Falaises du Luxembourg</div>
+    <div class="area-grid">
+      <a href="https://escalade.amebaownd.com/posts/57302839" class="area-card">
+        <img class="area-img" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/6681abe095ae25d75c9227f18d7db501_5a721dc4e1806e23a6b0fb41ec3a1c55.jpg?width=400" alt="Berdorf" loading="lazy" width="100" height="100"/>
+        <div class="area-info">
+          <div class="area-name">Berdorf</div>
+          <div class="area-meta">style : « Couenne »</div>
+          <div class="area-ambiance">✨ Un joyau caché en forêt</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
