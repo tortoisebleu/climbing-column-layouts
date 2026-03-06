@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>吹き出しストック（男性左・女性右）</title>
+
+  <style>
+   /* ===== 共通スタイル ===== */
+
+.chat-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  /*margin: 1.5em 0;*/
+  
+  margin: 0;        /* 左右は0 */
+  padding: 10px 0;  /* 上下の余白はpaddingで代替 */
+  
+  width: 100%;
+}
+
+.chat-face img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 4px #ddd;
+  flex-shrink: 0;
+}
+
+.chat-hukidashi {
+  position: relative;
+  max-width: calc(100% - 100px);
+  padding: 17px 13px;
+  border-radius: 12px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* 三角形（共通） */
+.chat-hukidashi::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  border: 12px solid transparent;
+}
+
+
+/* ===== 左側レイアウト ===== */
+
+.chat-box--left {
+  flex-direction: row;
+}
+
+.chat-hukidashi--left::after {
+  left: -24px;
+}
+
+
+/* ===== 右側レイアウト ===== */
+
+.chat-box--right {
+  flex-direction: row-reverse;
+}
+
+.chat-hukidashi--right::after {
+  right: -24px;
+}
+
+
+/* ===== キャラクターの色設定 ===== */
+
+/* 女性キャラクター（オレンジ系） */
+.character--female {
+  border: solid 3px #feead7;
+}
+.character-bubble--female {
+  background: #feead7;
+}
+.chat-hukidashi--left.character-bubble--female::after {
+  border-right-color: #feead7;
+}
+.chat-hukidashi--right.character-bubble--female::after {
+  border-left-color: #feead7;
+}
+
+/* 男性キャラクター（青系） */
+.character--male {
+  border: solid 3px #d7ebfe;
+}
+.character-bubble--male {
+  background: #d7ebfe;
+}
+.chat-hukidashi--left.character-bubble--male::after {
+  border-right-color: #d7ebfe;
+}
+.chat-hukidashi--right.character-bubble--male::after {
+  border-left-color: #d7ebfe;
+}
+
+
+/* ===== レスポンシブ対応 ===== */
+
+@media (max-width: 480px) {
+  .chat-face img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .chat-hukidashi {
+    max-width: calc(100% - 70px);
+    padding: 12px 10px;
+    /* font-size: 0.9em; ← この行を削除 */
+  }
+}
+  </style>
+</head>
+
+
+<body>
+
+<div class="chat-box chat-box--left">
+  <div class="chat-face">
+    <img class="character--male" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/8d7b0a32c24c44e54b0c1eb2c7281063_67566f3dac4e938eb83368c8f6542a68.png" alt="tortoise 7a" />
+  </div>
+  <div class="chat-hukidashi chat-hukidashi--left character-bubble--male">
+    ストラスブールの夜のクリスマスマーケットを満喫するにはどうすればいいかな？寒いよね？
+  </div>
+</div>
+
+<div class="chat-box chat-box--right">
+  <div class="chat-face">
+    <img class="character--female" src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/8ed7bbd61b78348fa635ba325a401c98_8e6ecd7366534889afd88c6472797869.png" alt="rabbit 7a" />
+  </div>
+  <div class="chat-hukidashi chat-hukidashi--right character-bubble--female">
+    寒いけど、夜のクリスマスマーケットは絶対おすすめだよ。私が考えたモデルコースがあるから、ぜひ参考にしてみて。<a href="https://escalade.amebaownd.com/posts/49274536" style="text-decoration:none;">ここにまとめておいたの。</a> ストラスブールのクリスマスマーケットを存分に楽しめるはずよ！
+  </div>
+</div>
+
+</body>
+</html>
