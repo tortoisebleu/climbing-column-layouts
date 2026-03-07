@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>早送りスライド (18秒)</title>
+  <style>
+    /* 画面いっぱいに表示するための追加設定 */
+    body { margin: 0; background-color: #ffffff; display: flex; align-items: center; min-height: 100vh; }
+    
+    .slide {
+      position: relative;
+      width: 100%;
+      padding-top: 60%;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+    .slide img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      /* 1.8秒 × 10枚 ＝ 18秒で一周 */
+      animation: perfectLoop 18s linear infinite;
+    }
+    @keyframes perfectLoop {
+      0%  { opacity: 0; }
+      2%  { opacity: 1; }
+      10% { opacity: 1; }
+      12% { opacity: 0; }
+      100%{ opacity: 0; }
+    }
+    /* 1.8秒ずつ正確にずらします */
+    .slide img:nth-child(1)  { animation-delay: 0s;    }
+    .slide img:nth-child(2)  { animation-delay: 1.8s;  }
+    .slide img:nth-child(3)  { animation-delay: 3.6s;  }
+    .slide img:nth-child(4)  { animation-delay: 5.4s;  }
+    .slide img:nth-child(5)  { animation-delay: 7.2s;  }
+    .slide img:nth-child(6)  { animation-delay: 9.0s;  }
+    .slide img:nth-child(7)  { animation-delay: 10.8s; }
+    .slide img:nth-child(8)  { animation-delay: 12.6s; }
+    .slide img:nth-child(9)  { animation-delay: 14.4s; }
+    .slide img:nth-child(10) { animation-delay: 16.2s; }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/d0451fabcecdd9fb0a0d644cd2d57b30_b6b72aa6e4072ab8280258580e4e0e6b.jpg" alt="Illuminations de la Cathédrale de Strasbourg">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/366813ee7f3c2d64f0b3ca05a1b5367b_871f4fac3b38903dfd720891aee12ef5.jpg" alt="Le Marché de Noël de Strasbourg">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/4c6957bc2eac7f8463ba1816179b6ce5_a0673a7264f574785807b5db0dbe3e90.jpg" alt="Cathédrale Notre-Dame-de-Strasbourg de Noël">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/7781d8e4a74afbeb6f0c1cbe36645c53_f062cf1947bfd4f234b121d0753356a0.jpg" alt="Strasbourg neige">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/5c11db3b1e7db0ded56a8c78ed2fbbc8_6d63338522bbe182e894ff3a565476d5.jpg" alt="Carnaval de Strasbourg">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/7cfa3a806124b26ab7cc027b1e7f0791_264ac50b52c72859df9f0a38a7a431da.jpg" alt="Fête De La Musique">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/f050e0db430d2c5877e860edad10254c_33170ff6ff42e7685fb6e5ec4000bb37.jpg" alt="Le Festival des arts dans la rue de Strasbourg">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/2a2f749ca4fe68f80756c196cd9255c6_b6dc59ef601ca7b142848e635ca4d761.png" alt="Feu d'Artifice Strasbourg">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/90c704302cc25815c87119acec1384b0_01a42d850449095e20c6c4b3a3f4e672.jpg" alt="l'Opéra national du Rhin">
+  <img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/818944ccfa912c013bdcd76fe1f1ef77_dcf5c4105bac288fd7b2f82321f1a433.jpg" alt="Marché des producteurs">
+</div>
+
+</body>
+</html>
