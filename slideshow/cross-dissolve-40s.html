@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スライド ディゾルブ (40秒)</title>
+
+<style>
+  .slide {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* ここを 60% から 75% に戻すと、最初の大きさになります */
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+
+  .slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    /* 全体で40秒（4秒 × 10枚） */
+    animation: quickCrossDissolve 40s linear infinite;
+  }
+
+  @keyframes quickCrossDissolve {
+    0% { opacity: 0; }
+    4% { opacity: 1; }   /* 約1.6秒で登場 */
+    12% { opacity: 1; }  /* 約4.8秒地点まで表示を維持 */
+    20% { opacity: 0; }  /* 約3.2秒かけてゆっくり退場（ここで次と重なる） */
+    100% { opacity: 0; }
+  }
+
+  /* 4秒（全体の10%）ずつずらして開始 */
+  .slide img:nth-child(1) { animation-delay: 0s; }
+  .slide img:nth-child(2) { animation-delay: 4s; }
+  .slide img:nth-child(3) { animation-delay: 8s; }
+  .slide img:nth-child(4) { animation-delay: 12s; }
+  .slide img:nth-child(5) { animation-delay: 16s; }
+  .slide img:nth-child(6) { animation-delay: 20s; }
+  .slide img:nth-child(7) { animation-delay: 24s; }
+  .slide img:nth-child(8) { animation-delay: 28s; }
+  .slide img:nth-child(9) { animation-delay: 32s; }
+  .slide img:nth-child(10) { animation-delay: 36s; }
+</style>
+</head>
+  
+<body>
+<div class="slide">
+
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/16b8746ab1c400692006834b51f33ae4_8b9cf7da2aba697711871ae8caf114a1.jpg" alt="Strasbourg">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/0e4deff2c0d7df5197e01fae05fe463d_24d52551d4dca9651bb596c7f843d001.jpg" alt="Riquewihr">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/f050e0db430d2c5877e860edad10254c_33170ff6ff42e7685fb6e5ec4000bb37.jpg" alt="Le Festival des arts dans la rue de Strasbourg 2023">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/e259487084f16d0a8af314c44302823d_89147c6594ba877d4ebd00d1f8f4d98d.jpg" alt="Annecy Palais de l’Ile">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/6645cfd1135492e45f38d5ca31a7c448_36aeee59e1634855d218e41d94c10703.jpg" alt="Grande Voie">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/c1a1eba23793506bb56a7140b8d19d47_0871a5dde49d28ac6e07275b5530f978.jpg" alt="Matterhorn 4478m">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/2058afd6b4b78f5b619c89100a6be5bd_2bfe915114883b8ff096e60b8bb3f839.jpg" alt="Martinswand">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/b990dc77372cbfc2b329fdcbde665eed_e44bbd0b662aa6b269cfa12a03341f1d.jpg" alt="Brasserie Roue Libre">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/7215f538eea52e2af2724f411671e3f9_d8184c0f2452df3827f5f23b0ba63b40.jpg" alt="Milano Galleria Vittorio Emanuele II">
+<img src="https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/499076/745d5654e24ff528af88e5a40bd7ac31_dbb9e81a69ea0af473478d9d62e5d2f8.jpg" alt="Torino San Salvario">  
+
+</div>
+
+</body>
+</html>
