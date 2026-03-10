@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Climbing Area - Blue Green mix-side-by-side</title>
-  
+
   <style>
     /* ===== Base ===== */
     .area-portfolio {
@@ -20,12 +20,11 @@
       gap: 15px;
     }
 
-　/* ===== Wrapper 直下の div（height: 100% を機能させるため） ===== */
+    /* ===== Wrapper 直下の div（height: 100% を機能させるため） ===== */
     .area-grid-wrapper > div {
       display: flex;
       flex-direction: column;
     }
-    
 
     /* ===== Country tag ===== */
     .country-tag {
@@ -44,11 +43,10 @@
       background: linear-gradient(#bed3ca, #5a9a8a);
     }
 
-    /* ===== Card (修正版) ===== */
+    /* ===== Card ===== */
     .area-card {
       display: flex;
-      align-items: stretch; /* これを入れると、中の画像とテキストの高さが揃います */
-      
+      align-items: stretch;
       background: #fff;
       border: 1px solid #d1d9e0;
       border-radius: 8px;
@@ -57,7 +55,7 @@
       color: inherit;
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
-    
+
     .area-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -68,24 +66,16 @@
       border-color: #5a9a8a;
     }
 
-
-/* ===== Card image (修正版) ===== */
+    /* ===== Card image ===== */
     .area-img {
       width: 100px;
       min-width: 100px;
-      
-      /* 高さを「自動」ではなく「親要素(カード)の高さ100%」にする */
-      height: 100%;       
-      
-      /* 画像の縦横比を維持したまま、枠いっぱいに広げる（重要！） */
-      object-fit: cover; 
-      
+      height: 100%;
+      object-fit: cover;
       display: block;
-      
-      /* 念押しで、親要素の高さに合わせる設定 */
-      align-self: stretch; 
+      align-self: stretch;
     }
-    
+
     /* ===== Card info ===== */
     .area-info {
       padding: 10px 12px;
@@ -134,14 +124,6 @@
   </style>
 </head>
 <body>
-
-  <!-- 簡易メニュー（自分用） -->
-  <nav style="margin: 20px 0; font-family: sans-serif;">
-    <a href="green.html">緑版</a> | 
-    <a href="blue.html">青版</a> | 
-    <a href="mix-side-by-side.html">混合（横）</a> | 
-    <a href="mix-stacked.html">混合（縦）</a>
-  </nav>
 
   <div class="area-portfolio">
     <div class="area-grid-wrapper">
